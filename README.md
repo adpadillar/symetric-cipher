@@ -53,3 +53,11 @@ Add a file `message.txt` with the message you want to encrypt/decrypt.
 Add a file `key.txt` with the encryption/decryption key.
 
 Run the tests with the `compile-and-test.sh` script.
+
+## GUI
+
+To run the GUI, use the following command:
+
+```
+python3 gui/main.py
+```

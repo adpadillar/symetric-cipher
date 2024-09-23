@@ -63,6 +63,10 @@ class EncryptionGUI:
             input_file.write(input_text.encode() if isinstance(input_text, str) else input_text)
 
         try:
+            # Check if the binary exists, if not, run the compile script
+            if not os.path.exists("./bin/encryption_program"):
+                subprocess.run(["sh", "compile-and-test.sh"], check=True)
+
             # Run the encryption program
             result = subprocess.run(
                 ["./bin/encryption_program", mode, "temp_input.txt", "temp_key.txt"],
